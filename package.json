@@ -21,7 +21,8 @@
   "resolutions": {
     "eslint-plugin-react": "^7.26.1",
     "eslint": "^7.32.0",
-    "eslint-plugin-react-hooks": "^4.2.0"
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -66,17 +67,5 @@
     "eslint-plugin-storybook": "^0.5.13",
     "prop-types": "^15.8.1",
     "webpack": "^5.73.0"
-  },
-  "eslintConfig": {
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
-    ]
   }
 }
