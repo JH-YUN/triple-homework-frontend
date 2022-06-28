@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+import { useCounterUp } from '../hooks/useCounterUp'
 import { useFadeIn } from '../hooks/useFadeIn'
 
 const MetricsLayout = styled.div`
@@ -13,16 +14,20 @@ const MetricsRow = styled.div`
 
 export const Metrics = () => {
   const fadeIn = useFadeIn({ duration: 700, delay: 100, transY: '20px' })
+  const userCounterUp = useCounterUp({ duration: 2000, end: 700 })
+  const reviewCounterUp = useCounterUp({ duration: 2000, end: 100 })
+  const scheduleCounterUp = useCounterUp({ duration: 2000, end: 470 })
+
   return (
     <MetricsLayout {...fadeIn}>
       <MetricsRow>
-        <strong>700만 명</strong>의 사용자
+        <strong>{userCounterUp}만 명</strong>의 사용자
       </MetricsRow>
       <MetricsRow>
-        <strong>100만 개</strong>의 여행 리뷰
+        <strong>{reviewCounterUp}만 개</strong>의 여행 리뷰
       </MetricsRow>
       <MetricsRow>
-        <strong>470만 개</strong>의 여행 일정
+        <strong>{scheduleCounterUp}만 개</strong>의 여행 일정
       </MetricsRow>
     </MetricsLayout>
   )
