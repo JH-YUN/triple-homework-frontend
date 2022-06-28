@@ -10,4 +10,4 @@ export default {
 const Template: Story<LogoProps> = (args) => <Logo {...args} />
 
 export const Basic = Template.bind({})
-Basic.args = { imgSrc: '/assets/triple2x.png', text: '2021년 12월 기준' }
+Basic.args = { text: '2021년 12월 기준' }
