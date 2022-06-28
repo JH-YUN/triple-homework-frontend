@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
+import logo from '../assets/images/triple2x.png'
 import { useFadeIn } from '../hooks/useFadeIn'
 
 export interface LogoProps {
-  imgSrc: string
   text?: string
 }
 const LogoLayout = styled.div`
@@ -23,11 +23,11 @@ const LogoText = styled.div`
   width: 100%;
   top: 82%;
 `
-export const Logo = ({ text, imgSrc }: LogoProps) => {
+export const Logo = ({ text }: LogoProps) => {
   const fadeIn = useFadeIn({ duration: 700, delay: 0, transY: '20px' })
   return (
     <LogoLayout {...fadeIn}>
-      <LogoImg src={imgSrc} alt="로고 이미지" />
+      <LogoImg src={logo} alt="로고 이미지" />
       <LogoText>{text}</LogoText>
     </LogoLayout>
   )

@@ -25,7 +25,7 @@ const RightLayout = styled.div`
 function App() {
   return (
     <Layout className="layout">
-      <Logo text="2021년 12월 기준" imgSrc="/assets/triple2x.png" />
+      <Logo text="2021년 12월 기준" />
       <RightLayout>
         <Metrics />
         <Awards>

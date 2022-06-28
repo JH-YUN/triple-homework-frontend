@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 import { useFadeIn } from '../hooks/useFadeIn'
+import appleBadge from '../assets/images/badge-apple4x.png'
+import googleBadge from '../assets/images/play-store2x.png'
 
 type Market = 'google' | 'apple'
 
@@ -28,10 +30,7 @@ const AwardText = styled.div`
 
 export const Award = ({ market, firstLine, secondLine }: AwardProps) => {
   const fadeIn = useFadeIn({ duration: 700, delay: 200, transY: '20px' })
-  const imgSrc =
-    market === 'google'
-      ? '/assets/play-store2x.png'
-      : '/assets/badge-apple4x.png'
+  const imgSrc = market === 'google' ? appleBadge : googleBadge
   return (
     <AwardLayout {...fadeIn}>
       <AwardImg src={imgSrc} alt="마켓 이미지" />
