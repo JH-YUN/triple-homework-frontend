@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { useFadeIn } from '../hooks/useFadeIn'
+
 const MetricsLayout = styled.div`
   font-size: 36px;
   letter-spacing: -1px;
@@ -10,8 +12,9 @@ const MetricsRow = styled.div`
 `
 
 export const Metrics = () => {
+  const fadeIn = useFadeIn({ duration: 700, delay: 100, transY: '20px' })
   return (
-    <MetricsLayout>
+    <MetricsLayout {...fadeIn}>
       <MetricsRow>
         <strong>700만 명</strong>의 사용자
       </MetricsRow>

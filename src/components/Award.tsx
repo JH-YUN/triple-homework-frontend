@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { useFadeIn } from '../hooks/useFadeIn'
+
 type Market = 'google' | 'apple'
 
 export interface AwardProps {
@@ -23,13 +25,15 @@ const AwardText = styled.div`
   padding-top: 5px;
   padding-left: 8px;
 `
+
 export const Award = ({ market, firstLine, secondLine }: AwardProps) => {
+  const fadeIn = useFadeIn({ duration: 700, delay: 200, transY: '20px' })
   const imgSrc =
     market === 'google'
       ? '/assets/play-store2x.png'
       : '/assets/badge-apple4x.png'
   return (
-    <AwardLayout>
+    <AwardLayout {...fadeIn}>
       <AwardImg src={imgSrc} alt="마켓 이미지" />
       <AwardText>
         {firstLine}
