@@ -21,7 +21,7 @@ const LogoText = styled.div`
   color: rgba(58, 58, 58, 0.7);
   position: absolute;
   width: 100%;
-  top: 280px;
+  top: 82%;
 `
 export const Logo = ({ text, imgSrc }: LogoProps) => {
   const fadeIn = useFadeIn({ duration: 700, delay: 0, transY: '20px' })
