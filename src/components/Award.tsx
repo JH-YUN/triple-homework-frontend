@@ -30,7 +30,7 @@ const AwardText = styled.div`
 
 export const Award = ({ market, firstLine, secondLine }: AwardProps) => {
   const fadeIn = useFadeIn({ duration: 700, delay: 200, transY: '20px' })
-  const imgSrc = market === 'google' ? appleBadge : googleBadge
+  const imgSrc = market === 'apple' ? appleBadge : googleBadge
   return (
     <AwardLayout {...fadeIn}>
       <AwardImg src={imgSrc} alt="마켓 이미지" />
